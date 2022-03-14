@@ -1,4 +1,4 @@
-class HomeController < ApplicationController
+class BoardsController < ApplicationController
     def index
     @board = Board.first
     end
