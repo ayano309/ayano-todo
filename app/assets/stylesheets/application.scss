@@ -2,6 +2,7 @@
 @import 'variables';
 @import 'card';
 @import 'tabs';
+@import 'board';
 
 html {
     word-spacing: 1px;
@@ -26,6 +27,11 @@ body {
     font-size: 1em;
     color: $text-base-color;
     font-family: 'Avenir';
+}
+
+a {
+    text-decoration: none;
+    color: $text-base-color;
 }
 
 .container {
