@@ -4,7 +4,7 @@
         <div class="dropdown">
             <%= image_tag 'Combined Shape', class: 'dropbtn' %>
             <div class="dropdown-content mini">
-                <a href="#">Edit</a>
+                <%= link_to 'Edit', edit_board_path(@board) %>
                 <a href="#">Delete</a>
             </div>
         </div>
