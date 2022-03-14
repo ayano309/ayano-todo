@@ -1,6 +1,7 @@
 <div class="board">
     <div class="board_title">
         <%= @board.name %>
+        <% if user_signed_in? %>
         <div class="dropdown">
             <%= image_tag 'Combined Shape', class: 'dropbtn' %>
                 <div class="dropdown-content mini">
@@ -8,6 +9,7 @@
                     <%= link_to 'Delete', board_path(@board), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' } %>
                 </div>
         </div>
+        <% end %>
     </div>
     <div class="board_content">
         <%= @board.description %>
