@@ -1,7 +1,13 @@
 <div class="board">
     <div class="board_title">
         <%= @board.name %>
-        <%= image_tag 'Combined Shape' %>
+        <div class="dropdown">
+            <%= image_tag 'Combined Shape', class: 'dropbtn' %>
+            <div class="dropdown-content mini">
+                <a href="#">Edit</a>
+                <a href="#">Delete</a>
+            </div>
+        </div>
     </div>
     <div class="board_content">
         <%= @board.description %>
