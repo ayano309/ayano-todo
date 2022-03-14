@@ -38,3 +38,17 @@ a {
     padding: 16px 16px;
     width: 100%;
 }
+
+.new_btn {
+    margin: 16px 0;
+    border: dashed 4px $base-bg-color;
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    color: $text-base-color;
+    padding: 70px 100px;
+
+    i {
+        margin-top: 22px;
+    }
+}
