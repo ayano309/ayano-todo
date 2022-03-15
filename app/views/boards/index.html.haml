@@ -1,0 +1,15 @@
+.container
+  %h1 All Boards
+  - @boards.each do |board|
+    = link_to board_path(board) do
+      .card
+        .card_content
+          .card_title
+            = board.name
+            = image_tag 'Combined Shape'
+          = board.description
+          .card_detail
+            = image_tag 'default-avatar.png'
+  = link_to new_board_path do
+    .new_btn
+      %p.i + Add new board
