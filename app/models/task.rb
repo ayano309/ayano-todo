@@ -20,6 +20,8 @@ class Task < ApplicationRecord
     belongs_to :user
     belongs_to :board
 
+    has_one_attached :eyecatch
+    
     validates :name, presence: true
     validates :description, presence: true
     #validates :limit_date, presence: true
