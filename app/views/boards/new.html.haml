@@ -1,0 +1,6 @@
+.container
+  %ul
+    - @board.errors.full_messages.each do |message|
+      %li= message
+  %h1 New Boards
+  = render 'form', board: @board

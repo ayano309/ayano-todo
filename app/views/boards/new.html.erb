@@ -1,9 +1,0 @@
-<div class="container">
-    <ul>
-    <% @board.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-    <% end %>
-    </ul>
-    <h1>New Boards</h1>
-    <%= render 'form', board: @board %>
-</div>

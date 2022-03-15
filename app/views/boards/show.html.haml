@@ -1,0 +1,17 @@
+.board
+  .board_title
+    = @board.name
+    - if user_signed_in?
+      .dropdown
+        = image_tag 'Combined Shape', class: 'dropbtn'
+        .dropdown-content.mini
+          = link_to 'Edit', edit_board_path(@board)
+          = link_to 'Delete', board_path(@board), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
+  .board_content
+    = @board.description
+  .board_detail
+    = image_tag 'default-avatar.png'
+.container
+  = link_to root_path do
+    .btn-primary
+      %p Topに戻る
