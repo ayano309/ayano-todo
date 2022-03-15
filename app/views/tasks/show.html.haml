@@ -1,17 +1,17 @@
-
-.board_title
-    = @task.name
-    - if user_signed_in? && current_user.has_written?(@task)
+.container 
+    .board_title
+        = @task.name
+        
         .board_detail_actions
         .dropdown
             = image_tag 'Combined Shape.svg', class: 'dropbtn'
             .dropdown-content.mini
                 = link_to 'Edit', edit_board_task_path(@task)
                 = link_to 'Delete', board_task_path(@task), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
-- if @task.eyecatch.attached?
-    .board_image
-        = image_tag @task.eyecatch
-.board
-    .board_detail
-        .board_content
-            = @task.description
+    - if @task.eyecatch.attached?
+        .board_image
+            = image_tag @task.eyecatch
+    .board
+        .board_detail
+            .board_content
+                = @task.description

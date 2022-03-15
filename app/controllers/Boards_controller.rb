@@ -9,6 +9,7 @@ class BoardsController < ApplicationController
 
     def show
         @tasks = @board.tasks
+        
     end
     def new
         @board = current_user.boards.build
