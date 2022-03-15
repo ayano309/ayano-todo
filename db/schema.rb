@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_15_045721) do
+ActiveRecord::Schema.define(version: 2022_03_14_063231) do
 
   create_table "boards", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
+    t.integer "user_id", null: false
+    t.string "name", null: false
+    t.text "description", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "user_id"
     t.index ["user_id"], name: "index_boards_on_user_id"
   end
 
