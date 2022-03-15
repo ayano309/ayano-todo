@@ -12,6 +12,9 @@
   .board_detail
     = image_tag 'default-avatar.png'
 .container
+  = link_to new_board_task_path(@board) do
+    .card_add.new_btn
+      +Add new card
   = link_to root_path do
     .btn-primary
       %p Topに戻る
