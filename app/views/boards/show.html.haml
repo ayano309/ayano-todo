@@ -5,20 +5,20 @@
     = @board.name
   - @tasks.each do |task|
     = link_to task_path(task) do
-      .card
+      .board
         - if task.eyecatch.attached?
-          .card_image
+          .board_image
             = image_tag task.eyecatch
-        .card_content
-          .card_title
+        .board_content
+          .task_title
             = task.name
-            = image_tag 'Combined Shape'
+            = image_tag 'Combined Shape', class: 'dropbtn'
           = task.description
-          .card_detail
+          .board_detail
             = image_tag 'default-avatar.png'
-            
+
   = link_to new_board_task_path(@board) do
-    .card_add.new_btn
+    .board_add.new_btn
       +Add new card
   = link_to root_path do
     .btn-primary
