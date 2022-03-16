@@ -1,0 +1,16 @@
+{
+    "name": "ayano-todo",
+    "description": "This is todo",
+    "keywords": [],
+    "website": "",
+    "repository": "https://github.com/ayano309/ayano-todo.git",
+    "env": {},
+    "addons": [
+        "heroku-postgresql:hobby-dev"
+    ],
+    "buildpacks": [{
+        "url": "heroku/nodejs"
+    }, {
+        "url": "heroku/ruby"
+    }]
+}
