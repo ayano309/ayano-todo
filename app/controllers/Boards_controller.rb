@@ -4,11 +4,12 @@ class BoardsController < ApplicationController
 
 
     def index
-    @boards = Board.all
+        @boards = Board.all
     end
 
     def show
-    
+        @tasks = @board.tasks
+        
     end
     def new
         @board = current_user.boards.build

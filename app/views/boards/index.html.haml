@@ -1,15 +1,23 @@
 .container
   %h1 All Boards
   - @boards.each do |board|
-    = link_to board_path(board) do
-      .card
-        .card_content
-          .card_title
-            = board.name
-            = image_tag 'Combined Shape'
+    
+    .card
+      .card_content
+        .card_title.flex
+          = board.name
+          - if user_signed_in? && current_user.has_written?(board)
+            .dropdown
+              = image_tag 'Combined Shape', class: 'dropbtn'
+              .dropdown-content.mini
+                = link_to 'Edit', edit_board_path(board)
+                = link_to 'Delete', board_path(board), data: { method: 'delete', confirm: '本当に削除してもいいですか？'} 
+        = link_to board_path(board) do
           = board.description
           .card_detail
             = image_tag 'default-avatar.png'
   = link_to new_board_path do
     .new_btn
       %p.i + Add new board
+
+
