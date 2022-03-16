@@ -19,13 +19,12 @@
 
     .comment_title
         Comment
-    .comment
-        - @comments.each do |comment|
-            .comment_content
-                .comment_detail
-                    = image_tag comment.user.avatar_image
-                .comment_comment
-                    %p= comment.content
+    
+    - @comments.each do |comment|
+        .comment
+            .comment_detail
+                = image_tag comment.user.avatar_image
+                %p= comment.content
 
     .comment_add.new_btn
         = link_to new_task_comment_path(@task) do
