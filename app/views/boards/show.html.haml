@@ -15,7 +15,7 @@
             = image_tag 'Combined Shape', class: 'dropbtn'
           = task.description
           .board_detail
-            = image_tag 'default-avatar.png'
+            = image_tag task.user.avatar_image
 
   = link_to new_board_task_path(@board) do
     .board_add.new_btn
