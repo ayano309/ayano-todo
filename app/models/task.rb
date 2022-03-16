@@ -26,6 +26,8 @@ class Task < ApplicationRecord
     validates :description, presence: true
     #validates :limit_date, presence: true
 
-
+    def comment_count
+        comments.count
+    end
     
 end

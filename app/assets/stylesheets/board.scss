@@ -42,6 +42,7 @@ $container-padding: 16px;
     &_detail {
         padding-top: 10px;
         display: flex;
+        justify-content: space-between;
         font-size: 12px;
         position: relative;
 
@@ -61,5 +62,9 @@ $container-padding: 16px;
 
     &_content {
         padding: 24px 0 32px;
+    }
+
+    &_comment{
+        display: flex;
     }
 }
