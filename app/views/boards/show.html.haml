@@ -16,6 +16,9 @@
           = task.description
           .board_detail
             = image_tag task.user.avatar_image
+            .board_comment
+              = image_tag 'comment.svg'
+              %span= task.comment_count
 
   = link_to new_board_task_path(@board) do
     .board_add.new_btn
