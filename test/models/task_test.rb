@@ -2,14 +2,14 @@
 #
 # Table name: tasks
 #
-#  id          :integer          not null, primary key
+#  id          :bigint           not null, primary key
 #  description :text             not null
 #  limit_date  :date
 #  name        :string           not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#  board_id    :integer          not null
-#  user_id     :integer          not null
+#  board_id    :bigint           not null
+#  user_id     :bigint           not null
 #
 # Indexes
 #

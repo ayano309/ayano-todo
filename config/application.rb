@@ -16,6 +16,9 @@ module AyanoTodo
       Dotenv::Railtie.load
     end
 
+    Bundler.require(*Rails.groups)
+    Dotenv::Railtie.load
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

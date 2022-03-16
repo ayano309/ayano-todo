@@ -23,8 +23,3 @@ end
     )
 end
 
-@task              = Task.new
-@task.name         = 'task1'
-@task.description        = 'todo'
-@task.limit_date   = '2018-10-10'
-@task.save
