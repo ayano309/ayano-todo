@@ -1,0 +1,49 @@
+@import 'variables';
+
+$avatar-size: 32px;
+
+
+.comment {
+    background-color: white;
+    margin: 16px 0;
+    position: relative;
+    border-radius: 10px;
+    
+    &_title {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 26px;
+        margin-top: 60px;
+        
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_content{
+        display: flex;
+        justify-content: space-around;
+        &_detail {
+            padding-top: 10px;
+            display: flex;
+            font-size: 12px;
+            position: relative;
+            
+            img {
+                cursor: pointer;
+                width: $avatar-size;
+                height: $avatar-size;
+                border-radius: 100%;
+                margin-left: 30px;
+            }
+    
+            &_actions {
+                right: 0px;
+                position: absolute;
+            }
+            &_comment{
+                font-size: 14px;
+            }
+        }
+    }
+    
+}
