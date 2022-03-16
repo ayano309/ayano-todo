@@ -5,6 +5,7 @@ class TasksController < ApplicationController
 
     def show
         @task = Task.find(params[:id])
+        @comments = @task.comments
     end
 
     def new
@@ -27,6 +28,7 @@ class TasksController < ApplicationController
 
     def edit
         @task = current_user.tasks.find(params[:id])
+        
     end
 
     def update
