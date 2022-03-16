@@ -30,5 +30,7 @@ class User < ApplicationRecord
   def has_written?(board)
     boards.exists?(id: board.id)
   end
-  
+  def prepare_profile
+    profile || build_profile
+  end
 end
